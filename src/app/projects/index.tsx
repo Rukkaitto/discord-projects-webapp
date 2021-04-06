@@ -10,14 +10,13 @@ const Projects = () => {
   const { serverId } = useParams<ParamTypes>();
   const [projects, setProjects] = useState({});
 
-  const fetchProjects = async () => {
-    const result = await getProjects(serverId);
-    setProjects(result);
-  };
-
   useEffect(() => {
+    const fetchProjects = async () => {
+      const result = await getProjects(serverId);
+      setProjects(result);
+    };
     fetchProjects();
-  }, []);
+  }, [serverId]);
 
   return (
     <div>

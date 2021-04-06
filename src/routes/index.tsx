@@ -5,7 +5,7 @@ import Projects from "../app/projects";
 const Routes = () => (
   <Router>
     <Switch>
-      <Route path="/:serverId/projects">
+      <Route path="/:serverId">
         <Projects />
       </Route>
       <Route path="/">

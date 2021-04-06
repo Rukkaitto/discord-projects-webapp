@@ -7,4 +7,11 @@ const getServers = async () => {
   return response.data;
 };
 
-export { getServers };
+const getProjects = async (serverId: string) => {
+  const response: AxiosResponse<any> = await axios.get(
+    `http://localhost:3001/${serverId}/projects`
+  );
+  return response.data;
+};
+
+export { getServers, getProjects };

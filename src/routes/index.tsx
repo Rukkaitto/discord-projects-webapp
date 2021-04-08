@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Servers from "../app/servers";
-import Projects from "../app/projects";
+import Servers from "../app/views/servers";
+import Projects from "../app/views/projects";
 
 const Routes: React.FC = () => (
   <Router>

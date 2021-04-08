@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getProjects } from "../../utils/api";
-import ProjectCard from "../components/project-card";
-import { Project } from "../intefaces";
+import { getProjects } from "../../../utils/api";
+import ProjectCard from "../../components/project-card";
+import { Project } from "../../intefaces";
 
 interface Params {
   serverId: string;

@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { getServers } from "../../utils/api";
 import ServerCard from "../components/server-card";
+import { Server } from "../intefaces";
 
 const Servers: React.FC = () => {
-  const [servers, setServers] = useState<any[]>([]);
+  const [servers, setServers] = useState<Server[]>([]);
 
   useEffect(() => {
     const fetchServers = async () => {

@@ -1,10 +1,5 @@
 import { useHistory } from "react-router-dom";
-
-interface Server {
-  _id: string;
-  icon: string;
-  name: string;
-}
+import { Server } from "../../intefaces";
 
 interface Props {
   server: Server;

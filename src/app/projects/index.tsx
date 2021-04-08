@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getProjects } from "../../utils/api";
 
-interface ParamTypes {
+interface Params {
   serverId: string;
 }
 
-const Projects = () => {
-  const { serverId } = useParams<ParamTypes>();
+const Projects: React.FC = () => {
+  const { serverId } = useParams<Params>();
   const [projects, setProjects] = useState({});
 
   useEffect(() => {

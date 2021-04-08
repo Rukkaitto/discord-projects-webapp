@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getProjects } from "../../utils/api";
+import ProjectCard from "../components/project-card";
 
 interface Params {
   serverId: string;
@@ -8,7 +9,7 @@ interface Params {
 
 const Projects: React.FC = () => {
   const { serverId } = useParams<Params>();
-  const [projects, setProjects] = useState({});
+  const [projects, setProjects] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -19,8 +20,10 @@ const Projects: React.FC = () => {
   }, [serverId]);
 
   return (
-    <div>
-      <pre>{JSON.stringify(projects, null, 2)}</pre>
+    <div className="p-3 flex flex-col space-y-3 m-3">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
     </div>
   );
 };

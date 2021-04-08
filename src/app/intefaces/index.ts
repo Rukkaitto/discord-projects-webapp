@@ -7,7 +7,7 @@ export interface Member {
 export interface Project {
   _id: string;
   title: string;
-  members: [Member];
+  members: Member[];
 }
 
 export interface Server {

@@ -23,7 +23,7 @@ const Projects: React.FC = () => {
   return (
     <div className="p-3 flex flex-col space-y-3 m-3">
       {projects.map((project) => (
-        <ProjectCard key={project._id} project={project} />
+        <ProjectCard key={project._id} serverId={serverId} project={project} />
       ))}
     </div>
   );

@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { Log, Project, Server } from "../../app/intefaces";
+import { Log, Project, Server } from "../../app/interfaces";
 import { API_URL } from "../../settings";
 
 export const getServers = async () => {

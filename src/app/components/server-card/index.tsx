@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { Server } from "../../intefaces";
+import { Server } from "../../interfaces";
 
 interface Props {
   server: Server;

@@ -1,4 +1,4 @@
-import { Member } from "../../intefaces";
+import { Member } from "../../interfaces";
 
 interface Props {
   members: Member[];

@@ -21,5 +21,5 @@ export interface Log {
   _id: string;
   author: Member;
   message: string;
-  createdAt: Date;
+  createdAt: string;
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getLogs } from "../../../utils/api";
-import { Log } from "../../intefaces";
+import { Log } from "../../interfaces";
 
 interface Params {
   serverId: string;
@@ -18,12 +18,20 @@ export const Logs: React.FC = () => {
       setLogs(result);
     };
     fetchProjects();
-  }, [projectId]);
+  }, [serverId, projectId]);
 
   return (
     <div>
       {logs.length > 0 &&
-        logs.map((log) => <div>Log message: {log.message}</div>)}
+        logs.map((log) => {
+          const date = new Date(log.createdAt);
+          const localeDate = date.toLocaleString();
+          return (
+            <div>
+              {localeDate} Log message: {log.message}
+            </div>
+          );
+        })}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { getProjects } from "../../../utils/api";
 import ProjectCard from "../../components/project-card";
-import { Project } from "../../intefaces";
+import { Project } from "../../interfaces";
 
 interface Params {
   serverId: string;

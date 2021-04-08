@@ -11,7 +11,7 @@ const ServerCard: React.FC<Props> = ({ server }) => {
     <div
       key={server._id}
       onClick={() => history.push(`/${server._id}`)}
-      className="rounded-lg shadow border flex flex-row items-center p-5 m-2 cursor-pointer"
+      className="bg-white rounded-lg shadow border flex flex-row items-center p-5 m-2 cursor-pointer transform hover:scale-105 transition"
     >
       <img
         className="rounded-full w-20 h-20"

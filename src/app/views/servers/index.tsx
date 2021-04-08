@@ -17,7 +17,7 @@ const Servers: React.FC = () => {
   return (
     <div className="p-3 flex flex-wrap">
       {servers.map((server) => (
-        <ServerCard server={server} />
+        <ServerCard key={server._id} server={server} />
       ))}
     </div>
   );

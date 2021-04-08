@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getLogs } from "../../../utils/api";
+import LogCard from "../../components/log-card";
 import { Log } from "../../interfaces";
 
 interface Params {
@@ -21,17 +22,9 @@ export const Logs: React.FC = () => {
   }, [serverId, projectId]);
 
   return (
-    <div>
+    <div className="p-5 space-y-5">
       {logs.length > 0 &&
-        logs.map((log) => {
-          const date = new Date(log.createdAt);
-          const localeDate = date.toLocaleString();
-          return (
-            <div>
-              {localeDate} Log message: {log.message}
-            </div>
-          );
-        })}
+        logs.map((log) => <LogCard key={log._id} log={log} />)}
     </div>
   );
 };

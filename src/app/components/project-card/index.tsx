@@ -16,7 +16,7 @@ const ProjectCard: React.FC<Props> = ({ serverId, project }) => {
 
   return (
     <div
-      className="p-5 flex flex-col space-y-3 shadow border rounded-lg cursor-pointer"
+      className="bg-white p-5 flex flex-col space-y-3 shadow border rounded-lg cursor-pointer"
       onClick={() => {
         history.push(`/${serverId}/${project._id}`);
       }}
